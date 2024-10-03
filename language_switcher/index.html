@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Switcher</title>
+    <script type="module" src="js.js"></script>
+</head>
+
+<body>
+
+
+
+
+    <header class="header">UDSKIFTES</header>
+    <main>
+        <label>
+            <p class="changeLanguage"></p>
+            <select class="selectLang" name="language">
+                <option value="da">Dansk</option>
+                <option value="de">Deutsche</option>
+            </select>
+        </label>
+
+        <p>Content</p>
+
+    </main>
+    <footer class="footer">UDSKIFTES</footer>
+
+</body>
+
+</html>
+
+<style>
+    :root {
+        --content-width: min(1000px, 100% - 1rem * 2);
+        --full-width: minmax(1rem, 1fr);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    label {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+
+    body {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: [full-start] var(--full-width) [content] var(--content-width) var(--full-width) [full-end];
+        height: 100%;
+
+        & main {
+            min-height: calc(90vh - 90px);
+        }
+    }
+
+    header,
+    footer,
+    main {
+        grid-column: full;
+        display: grid;
+        grid-template-columns: subgrid;
+        gap: 0 1rem;
+
+        >* {
+            grid-column: content;
+        }
+    }
+
+    .full-bleed {
+        grid-column: full;
+        display: grid;
+        grid-template-columns: subgrid;
+
+        >* {
+            grid-column: content;
+        }
+    }
+
+    footer,
+    header {
+        background-color: rgb(69, 65, 133);
+        color: white;
+        font-size: 300%;
+        padding: 30px 0;
+    }
+
+    footer {
+        margin-top: -50px;
+
+    }
+</style>

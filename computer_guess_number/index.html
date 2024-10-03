@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer gæt et tal</title>
+</head>
+
+<body>
+    <p class="computer_guess">Tænk på et tal mellem 0-100</p>
+
+    <div class="buttons">
+        <button class="start">start spil</button>
+        <button class="too_high disabled">for højt</button>
+        <button class="too_low disabled">for lavt</button>
+        <button class="correct disabled">correct svar!</button>
+    </div>
+
+    <script type="module" src="computerGuess.js"></script>
+</body>
+
+</html>
+
+
+<style>
+    .buttons button {
+
+        outline: gray;
+        border-radius: 50px;
+    }
+
+    .disabled {
+        pointer-events: none;
+        background-color: gray;
+        outline: black;
+    }
+</style>
