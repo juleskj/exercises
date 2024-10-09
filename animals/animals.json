@@ -1,0 +1,38 @@
+[
+  {
+    "fullname": "Mandu",
+    "desc": "the amazing",
+    "type": "cat",
+    "age": 10
+  },
+  {
+    "fullname": "Miacat",
+    "desc": "the black",
+    "type": "cat",
+    "age": 10
+  },
+  {
+    "fullname": "Leeloo",
+    "desc": "the growing",
+    "type": "dog",
+    "age": 3
+  },
+  {
+    "fullname": "Toothless",
+    "desc": "the trained",
+    "type": "dragon",
+    "age": 14
+  },
+  {
+    "fullname": "ScoobyDoo",
+    "desc": "the wondering",
+    "type": "dog",
+    "age": 58
+  },
+  {
+    "fullname": "Horsey",
+    "desc": "the horsing",
+    "type": "horse",
+    "age": 10
+  }
+]
