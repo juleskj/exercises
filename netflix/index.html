@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>netflix</title>
+
+</head>
+
+<body>
+
+    <div class="progress-container">
+        <div class="progress-bar"></div>
+    </div>
+
+    <script type="module" src="netflix.js"></script>
+
+</body>
+
+
+</html>
+
+
+<style>
+    .progress-container {
+        width: 100%;
+        height: 30px;
+        background-color: #e0e0e0;
+        border-radius: 15px;
+        margin-top: 50px;
+        overflow: hidden;
+    }
+
+
+    .progress-bar {
+        height: 100%;
+        width: 0;
+        background-color: #4caf50;
+        border-radius: 15px;
+        animation: kf_fillLine 60s forwards;
+    }
+
+    @keyframes kf_fillLine {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 100%;
+        }
+    }
+
+    .disappear {
+        animation: disappear_kf 1s ease-out;
+        animation-fill-mode: both;
+    }
+
+    @keyframes disappear_kf {
+        from {
+            opacity: 1;
+            transform: scaleX(1);
+        }
+
+        to {
+            opacity: 0;
+            transform: scaleX(0);
+            transform: translateY(100px);
+        }
+    }
+
+    .appear {
+        animation: appear_kf 1s ease-out 1;
+        animation-fill-mode: both;
+    }
+
+    @keyframes appear_kf {
+        from {
+            opacity: 0;
+            transform: scaleX(0);
+            transform: translateY(100px);
+        }
+
+        to {
+            opacity: 1;
+            transform: scaleX(1);
+
+        }
+    }
+</style>

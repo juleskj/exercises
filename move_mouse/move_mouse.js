@@ -1,4 +1,4 @@
-const body = document.querySelector("body");
+import { $, $$ } from "../utils/dom.js";
 
 window.addEventListener("mousemove", function (event) {
   console.log(`x: ${event.x} y: ${event.y}`);
@@ -17,13 +17,13 @@ window.addEventListener("mousemove", function (event) {
   //her laver jeg talet om til en sting med % så jeg kan bruge den til min bacgrounds farve
   saturationProcent = saturationProcent + "%";
 
-  document.querySelector(".x-value").textContent = `${lightnessProcent}`;
-  document.querySelector(".y-value").textContent = `${saturationProcent}`;
+  $(".x-value").textContent = `${lightnessProcent}`;
+  $(".y-value").textContent = `${saturationProcent}`;
 
   console.log(lightnessProcent);
   console.log(saturationProcent);
 
-  body.style.setProperty(
+  $("body").style.setProperty(
     "background-color",
     `hsl(325, ${saturationProcent}, ${lightnessProcent})`
   );
